@@ -1,12 +1,16 @@
 FROM node:7.9.0-alpine
 
+EXPOSE 3000
 # Set a working directory
 WORKDIR /usr/src/app
 
-# Copy application files
-COPY ./build /usr/src/app
+ADD package.json .
+RUN npm install
+
+ADD . .
+RUN npm run build
 
 # Install Node.js dependencies
 RUN yarn install --production --no-progress
 
-CMD [ "node", "server.js" ]
+CMD [ "node", "build/server.js" ]
