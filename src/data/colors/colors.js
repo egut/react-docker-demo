@@ -3,7 +3,7 @@ const express = require('express'),
     router = express.Router();
 
 const redis = require("redis"),
-	redis_client = redis.createClient(process.env.REDIS_HOST)
+	redis_client = redis.createClient({host: process.env.REDIS_HOST})
 
 var colors = {colors:['#ffffff', '#000000', '#ff0000', '#ffffff', '#000000', '#00ff00', '#000000', '#ffffff']};
 
