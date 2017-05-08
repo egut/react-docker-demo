@@ -9,19 +9,17 @@
 
 import React from 'react';
 import Layout from '../../components/Layout';
-import Login from './Login';
+import Leds from './Leds';
 
-const title = 'Log In';
+const title = 'Led demo';
 
 export default {
 
-  path: '/login',
-
-  action() {
+  path: '/',
+  async action({ fetch }) {
     return {
       title,
-      component: <Layout><Login title={title} /></Layout>,
+      component: <Layout><Leds title={title} fetch={fetch}/></Layout>,
     };
   },
-
 };
