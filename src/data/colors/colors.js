@@ -11,7 +11,7 @@ if (fs.existsSync('/run/secrets/redis_secret')) {
 	const password = fs.readFileSync('/run/secrets/redis_secret','utf8');
 	redis_opt['password']=password.replace('\n','');
 }
-redis_client = redis.createClient(redis_opt);
+const redis_client = redis.createClient(redis_opt);
 
 var colors = {colors:['#ffffff', '#000000', '#ff0000', '#ffffff', '#000000', '#00ff00', '#000000', '#ffffff']};
 
