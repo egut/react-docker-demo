@@ -51,7 +51,7 @@ class Led extends React.Component {
           <span className={s.colorLed} style={{backgroundColor: '#ff0000' }} onClick={this.onClick.bind(this, '#ff0000')}></span>
           <span className={s.colorLed} style={{backgroundColor: '#00ff00' }} onClick={this.onClick.bind(this, '#00ff00')}></span>
           <span className={s.colorLed} style={{backgroundColor: '#0000ff' }} onClick={this.onClick.bind(this, '#0000ff')}></span>
-          <span className={s.colorLed} style={{backgroundColor: '#ffff00' }} onClick={this.onClick.bind(this, '#ffff00')}></span>
+          <span className={s.colorLed} style={{backgroundColor: '#000000' }} onClick={this.onClick.bind(this, '#000000')}></span>
         </div>
       </span>
       );
