@@ -1,9 +1,17 @@
 const express = require('express'),
     debug = require('debug')('api:colors'),
+    fs = require('fs'),
     router = express.Router();
 
 const redis = require("redis"),
-	redis_client = redis.createClient({host: process.env.REDIS_HOST})
+	  redis_opt = {host: process.env.REDIS_HOST};
+
+
+if (fs.existsSync('/run/secrets/redis_secret')) {
+	const password = fs.readFileSync('/run/secrets/redis_secret','utf8');
+	redis_opt['password']=password.replace('\n','');
+}
+redis_client = redis.createClient(redis_opt);
 
 var colors = {colors:['#ffffff', '#000000', '#ff0000', '#ffffff', '#000000', '#00ff00', '#000000', '#ffffff']};
 

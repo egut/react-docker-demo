@@ -22,7 +22,7 @@ import createFetch from './createFetch';
 import router from './router';
 import assets from './assets.json'; // eslint-disable-line import/no-unresolved
 import config from './config';
-import colors from './data/colors/colors'
+import colors from './data/colors/colors';
 const app = express();
 
 //
