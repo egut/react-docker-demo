@@ -48,10 +48,10 @@ class Led extends React.Component {
       <span className={s.led}>
         <div className={s.innerLed} style={{backgroundColor: this.props.color}} onClick={this.viewColorPicker}></div>
         <div className={this.state.view ? s.visible : s.hidden }>
-          <span className={s.colorLed} style={{backgroundColor: '#ff0000' }} onClick={this.onClick.bind(this, '#ff000000')}></span>
-          <span className={s.colorLed} style={{backgroundColor: '#00ff00' }} onClick={this.onClick.bind(this, '#00ff0000')}></span>
-          <span className={s.colorLed} style={{backgroundColor: '#0000ff' }} onClick={this.onClick.bind(this, '#0000ff00')}></span>
-          <span className={s.colorLed} style={{backgroundColor: '#000000' }} onClick={this.onClick.bind(this, '#00000000')}></span>
+          <span className={s.colorLed} style={{backgroundColor: '#ff0000' }} onClick={this.onClick.bind(this, '#ff000064')}></span>
+          <span className={s.colorLed} style={{backgroundColor: '#00ff00' }} onClick={this.onClick.bind(this, '#00ff0064')}></span>
+          <span className={s.colorLed} style={{backgroundColor: '#0000ff' }} onClick={this.onClick.bind(this, '#0000ff64')}></span>
+          <span className={s.colorLed} style={{backgroundColor: '#000000' }} onClick={this.onClick.bind(this, '#00000064')}></span>
         </div>
       </span>
       );
