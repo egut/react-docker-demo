@@ -32,6 +32,9 @@ class Leds extends React.Component {
     const resp = await this.props.fetch('/api/colors', {method: 'GET'});
     const { colors } = await resp.json();
     if (!colors) throw new Error('Failed to load the colors feed.');
+    for (var i = 0; i < colors.length; i++) {
+      colors[i]=colors[i].substring(0,7);
+    }
     this.setState({color:colors});
     //console.log("Loop:", colors);
   };
