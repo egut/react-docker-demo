@@ -49,6 +49,9 @@ class Leds extends React.Component {
         body:JSON.stringify({color: color})});
       const { colors } = await resp.json();
       if (!colors) throw new Error('Failed to load the colors feed.');
+      for (var i = 0; i < colors.length; i++) {
+        colors[i]=colors[i].substring(0,7);
+      }
       this.setState({color:colors});
   };
 
